@@ -1,3 +1,4 @@
+#coding:utf-8
 import re
 # 这里填输入 {{[].__class__.__base__.__subclasses__()}} 之后看到的全部类
 a=''' '''
